@@ -1,6 +1,7 @@
 from logger import *
 from edit import *
 from import_contacts import *
+from move_contacts import *
 from delete import *
 
 
@@ -18,6 +19,7 @@ def interface():
             '4. Редактировать контакт\n' 
             '5. Удалить контакт\n'
             '6. Импорт контактов\n'
+            '7. Перенос контактов\n'
             "\n"
             '0. Выход из программы\n'
             "\n"
@@ -25,7 +27,7 @@ def interface():
 
         user_input = input('Введите вариант: ')
 
-        while user_input not in ('1', '2', '3', '4', '5', '6', '0'):
+        while user_input not in ('1', '2', '3', '4', '5', '6', '7', '0'):
             print('Некорректный ввод.')
             user_input = input('Введите вариант: ')
 
@@ -44,5 +46,7 @@ def interface():
                 delete_contact()
             case '6':
                 import_contacts()
+            case '7':
+                move_contacts()
 
 
